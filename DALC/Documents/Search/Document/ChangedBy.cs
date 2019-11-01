@@ -1,0 +1,43 @@
+using System;
+using System.Xml;
+using Kesco.Lib.Win.Data.DALC.Documents.Search.Patterns;
+
+namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Document
+{
+    [Option("Document.ChangedBy", typeof (ChangedBy))]
+    public class ChangedBy : EmployeeListOption
+    {
+        protected ChangedBy(XmlElement el)
+            : base(el)
+        {
+            Mode = Modes.OR;
+            shortTextPrefix = Resources.GetString("shortTextPrefix");
+            shortTextPostfix = "";
+
+            htmlPrefix = Resources.GetString("htmlPrefix");
+            htmlPrefix2 = Resources.GetString("htmlPrefix2");
+            htmlPostfix = "";
+
+            textItemPrefix = "[";
+            textItemPostfix = "]";
+        }
+
+        public override string GetSQL(bool throwOnError)
+        {
+            try
+            {
+                string[] values = GetValues(throwOnError);
+                if (values.Length == 0)
+                    throw new Exception(Resources.GetString("GetSQL") + Meta.Description);
+
+                return GetSQLCondition("T0.Изменил =@VAL");
+            }
+            catch (Exception ex)
+            {
+                if (throwOnError)
+                    throw ex;
+                return null;
+            }
+        }
+    }
+}

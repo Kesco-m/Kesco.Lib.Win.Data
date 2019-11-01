@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSDocs" targetNamespace="http://tempuri.org/DSDocs.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DSDocs.xsd" xmlns:mstns="http://tempuri.org/DSDocs.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="DSDocs" msdata:IsDataSet="true">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="ТипыДокументов">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="КодТипаДокумента" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                            <xs:element name="ТипДокумента" type="xs:string" minOccurs="0" />
+                            <xs:element name="ИмяПредставления" type="xs:string" />
+                            <xs:element name="НаличиеФормы" type="xs:unsignedByte" />
+                            <xs:element name="URL" type="xs:string" />
+                            <xs:element name="SearchURL" type="xs:string" />
+                            <xs:element name="Исходящий" type="xs:boolean" />
+                            <xs:element name="ТипАвтогенерацииНомера" type="xs:int" />
+                            <xs:element name="АлгоритмАвтогенерацииНомера" type="xs:int" />
+                            <xs:element name="Changed" type="xs:boolean" />
+                            <xs:element name="Parent" type="xs:int" minOccurs="0" />
+                            <xs:element name="L" type="xs:int" />
+                            <xs:element name="R" type="xs:int" />
+                            <xs:element name="Изменил" type="xs:int" />
+                            <xs:element name="Изменено" type="xs:dateTime" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ПоляДокументов">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="КодПоляДокумента" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                            <xs:element name="КодТипаДокумента" type="xs:int" />
+                            <xs:element name="ПорядокПоляДокумента" type="xs:int" />
+                            <xs:element name="ПолеДокумента" type="xs:string" />
+                            <xs:element name="КолонкаТаблицы" type="xs:string" />
+                            <xs:element name="Обязательность" type="xs:boolean" />
+                            <xs:element name="КодТипаПоля" type="xs:int" />
+                            <xs:element name="ЧислоДесятичныхЗнаков" type="xs:int" />
+                            <xs:element name="URLПоиска" type="xs:string" />
+                            <xs:element name="ПараметрыПоиска" type="xs:string" />
+                            <xs:element name="ЗаголовокФормыПоиска" type="xs:string" />
+                            <xs:element name="СтрокаПодключения" type="xs:string" />
+                            <xs:element name="SQLЗапрос" type="xs:string" />
+                            <xs:element name="Изменил" type="xs:int" />
+                            <xs:element name="Изменено" type="xs:dateTime" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ТипыПолей">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="КодТипаПоля" type="xs:int" />
+                            <xs:element name="ТипПоля" type="xs:string" />
+                            <xs:element name="ТипыДанных" type="xs:string" />
+                            <xs:element name="ИмяПоля" type="xs:string" />
+                            <xs:element name="НужноЧислоДесятичныхЗнаков" type="xs:boolean" />
+                            <xs:element name="НуженURLПоиска" type="xs:boolean" />
+                            <xs:element name="НуженЗаголовокФормыПоиска" type="xs:boolean" />
+                            <xs:element name="НуженSQLЗапрос" type="xs:boolean" />
+                            <xs:element name="Сервис" type="xs:string" />
+                            <xs:element name="Сущность" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Документы">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="КодДокумента" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" />
+                            <xs:element name="КодТипаДокумента" type="xs:int" />
+                            <xs:element name="НомерДокумента" type="xs:string" />
+                            <xs:element name="ДатаДокумента" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="Описание" type="xs:string" />
+                            <xs:element name="КодИзображенияДокументаОсновного" type="xs:int" minOccurs="0" />
+                            <xs:element name="НомерInt" type="xs:int" minOccurs="0" />
+                            <xs:element name="НомерДокументаRL" type="xs:string" minOccurs="0" />
+                            <xs:element name="Изменил" type="xs:int" />
+                            <xs:element name="Изменено" type="xs:dateTime" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ДокументыДанные">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="КодДокумента" type="xs:int" />
+                            <xs:element name="Изменил" type="xs:int" />
+                            <xs:element name="Изменено" type="xs:dateTime" />
+                            <xs:element name="КодЛица1" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодЛица2" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодЛица3" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодЛица4" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодСклада1" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодСклада2" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодСклада3" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодСклада4" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодРесурса1" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодРесурса2" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодСотрудника1" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодСотрудника2" type="xs:int" minOccurs="0" />
+                            <xs:element name="КодБизнесПроекта" type="xs:int" minOccurs="0" />
+                            <xs:element name="Дата2" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="Дата3" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="Дата4" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="Дата5" type="xs:dateTime" minOccurs="0" />
+                            <xs:element name="Flag1" type="xs:unsignedByte" minOccurs="0" />
+                            <xs:element name="Flag2" type="xs:unsignedByte" minOccurs="0" />
+                            <xs:element name="Flag3" type="xs:unsignedByte" minOccurs="0" />
+                            <xs:element name="Flag4" type="xs:unsignedByte" minOccurs="0" />
+                            <xs:element name="Flag5" type="xs:unsignedByte" minOccurs="0" />
+                            <xs:element name="Int1" type="xs:int" minOccurs="0" />
+                            <xs:element name="Int2" type="xs:int" minOccurs="0" />
+                            <xs:element name="Int3" type="xs:int" minOccurs="0" />
+                            <xs:element name="Int4" type="xs:int" minOccurs="0" />
+                            <xs:element name="Int5" type="xs:int" minOccurs="0" />
+                            <xs:element name="Int6" type="xs:int" minOccurs="0" />
+                            <xs:element name="Int7" type="xs:int" minOccurs="0" />
+                            <xs:element name="Text50_1" type="xs:string" />
+                            <xs:element name="Text50_2" type="xs:string" />
+                            <xs:element name="Text50_3" type="xs:string" />
+                            <xs:element name="Text50_4" type="xs:string" />
+                            <xs:element name="Text50_5" type="xs:string" />
+                            <xs:element name="Text50_6" type="xs:string" />
+                            <xs:element name="Text50_7" type="xs:string" />
+                            <xs:element name="Text50_8" type="xs:string" />
+                            <xs:element name="Text50_9" type="xs:string" />
+                            <xs:element name="Text50_10" type="xs:string" />
+                            <xs:element name="Text100_1" type="xs:string" />
+                            <xs:element name="Text100_2" type="xs:string" />
+                            <xs:element name="Text100_3" type="xs:string" />
+                            <xs:element name="Text100_4" type="xs:string" />
+                            <xs:element name="Text100_5" type="xs:string" />
+                            <xs:element name="Text100_6" type="xs:string" />
+                            <xs:element name="Text300_1" type="xs:string" />
+                            <xs:element name="Text300_2" type="xs:string" />
+                            <xs:element name="Text300_3" type="xs:string" />
+                            <xs:element name="Text300_4" type="xs:string" />
+                            <xs:element name="Text300_5" type="xs:string" />
+                            <xs:element name="Text300_6" type="xs:string" />
+                            <xs:element name="Text1000_1" type="xs:string" />
+                            <xs:element name="Text1000_2" type="xs:string" />
+                            <xs:element name="Money1" type="xs:decimal" minOccurs="0" />
+                            <xs:element name="Money2" type="xs:decimal" minOccurs="0" />
+                            <xs:element name="Money3" type="xs:decimal" minOccurs="0" />
+                            <xs:element name="Money4" type="xs:decimal" minOccurs="0" />
+                            <xs:element name="Money5" type="xs:decimal" minOccurs="0" />
+                            <xs:element name="Money6" type="xs:decimal" minOccurs="0" />
+                            <xs:element name="Money7" type="xs:decimal" minOccurs="0" />
+                            <xs:element name="Money8" type="xs:decimal" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="СвязиДокументов">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="КодСвязиДокументов" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" />
+                            <xs:element name="КодДокументаОснования" type="xs:int" />
+                            <xs:element name="КодДокументаВытекающего" type="xs:int" />
+                            <xs:element name="КодПоляДокумента" type="xs:int" minOccurs="0" />
+                            <xs:element name="ПорядокОснования" type="xs:int" />
+                            <xs:element name="ПорядокВытекающего" type="xs:int" />
+                            <xs:element name="Изменил" type="xs:int" />
+                            <xs:element name="Изменено" type="xs:dateTime" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ЛицаДокументов">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="КодЛицаДокумента" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" />
+                            <xs:element name="КодДокумента" type="xs:int" />
+                            <xs:element name="КодЛица" type="xs:int" />
+                            <xs:element name="Положение" type="xs:unsignedByte" />
+                            <xs:element name="Изменил" type="xs:int" />
+                            <xs:element name="Изменено" type="xs:dateTime" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ПодписиДокументов">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="КодПодписиДокумента" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" />
+                            <xs:element name="КодДокумента" type="xs:int" />
+                            <xs:element name="КодСотрудника" type="xs:int" />
+                            <xs:element name="КодСотрудникаЗА" type="xs:int" minOccurs="0" />
+                            <xs:element name="Дата" type="xs:dateTime" />
+                            <xs:element name="ТипПодписи" type="xs:unsignedByte" />
+                            <xs:element name="Комментарий" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+        <xs:unique name="DSDocsKey1" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:ТипыДокументов" />
+            <xs:field xpath="mstns:КодТипаДокумента" />
+        </xs:unique>
+        <xs:unique name="DSDocsKey2" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:ПоляДокументов" />
+            <xs:field xpath="mstns:КодПоляДокумента" />
+        </xs:unique>
+        <xs:unique name="DSDocsKey3" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:ТипыПолей" />
+            <xs:field xpath="mstns:КодТипаПоля" />
+        </xs:unique>
+        <xs:key name="DSDocsKey4" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:Документы" />
+            <xs:field xpath="mstns:КодДокумента" />
+        </xs:key>
+        <xs:key name="DSDocsKey5" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:ДокументыДанные" />
+            <xs:field xpath="mstns:КодДокумента" />
+        </xs:key>
+        <xs:key name="DSDocsKey6" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:ЛицаДокументов" />
+            <xs:field xpath="mstns:КодЛицаДокумента" />
+        </xs:key>
+        <xs:key name="DSDocsKey7" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:СвязиДокументов" />
+            <xs:field xpath="mstns:КодСвязиДокументов" />
+        </xs:key>
+        <xs:unique name="DSDocsKey8" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:ПодписиДокументов" />
+            <xs:field xpath="mstns:КодПодписиДокумента" />
+        </xs:unique>
+        <xs:keyref name="ДокументыСвязиДокументов" refer="DSDocsKey4" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:СвязиДокументов" />
+            <xs:field xpath="mstns:КодДокументаВытекающего" />
+        </xs:keyref>
+        <xs:keyref name="ДокументыЛицаДокументов" refer="DSDocsKey4" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:ЛицаДокументов" />
+            <xs:field xpath="mstns:КодДокумента" />
+        </xs:keyref>
+        <xs:keyref name="ДокументыДокументыДанные" refer="DSDocsKey4" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:ДокументыДанные" />
+            <xs:field xpath="mstns:КодДокумента" />
+        </xs:keyref>
+        <xs:keyref name="ДокументыПодписиДокументов" refer="DSDocsKey4" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:ПодписиДокументов" />
+            <xs:field xpath="mstns:КодДокумента" />
+        </xs:keyref>
+    </xs:element>
+</xs:schema>

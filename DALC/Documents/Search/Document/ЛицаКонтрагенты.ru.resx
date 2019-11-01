@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Meta.Description">
+		<value>лица-контрагенты</value>
+	</data>
+	<data name="shortTextPrefix">
+		<value>по лицу </value>
+	</data>
+	<data name="htmlPrefix">
+		<value>документ по лицу-контрагенту </value>
+	</data>
+	<data name="htmlPrefix2">
+		<value>документ по лицам-контрагентам </value>
+	</data>
+	<data name="htmlPrefix3">
+		<value>с ограничениями </value>
+	</data>
+	<data name="GetSQL">
+		<value>Необходимо выбрать лиц контрагентов.</value>
+	</data>
+	<data name="PersonType">
+		<value>Включающих: </value>
+	</data>
+	<data name="PersonOrganization">
+		<value>Организации</value>
+	</data>
+	<data name="PersonPhysical">
+		<value>Физические лица</value>
+	</data>
+	<data name="PersonBank">
+		<value>Банки</value>
+	</data>
+	<data name="PersonUncheck">
+		<value>Не проверенных бухгалтерией</value>
+	</data>
+	<data name="PersonCheck">
+		<value>Проверенных бухгалтерией</value>
+	</data>
+	<data name="PersonArea">
+		<value>Зарегистрированных в "</value>
+	</data>
+	<data name="PersonOPForma">
+		<value>Соответствующих организационно-правовой форме "</value>
+	</data>
+	<data name="PersonUsers">
+		<value>Ответственные лица: </value>
+	</data>
+	<data name="PersonThemes">
+		<value>Соответствующих типу</value>
+	</data>
+	<data name="PersonSubThemes">
+		<value>, включая подтипы</value>
+	</data>
+	<data name="PersonBusinessProject">
+		<value>Работающих по бизнес проекту</value>
+	</data>
+	<data name="PersonSubBusinessProject">
+		<value>, с подпроектами</value>
+	</data>
+	<data name="PersonAnyBusinessProject">
+		<value>Работающих по любому бизнес проекту. </value>
+	</data>
+	<data name="PersonNullBusinessProject">
+		<value>Работающих без бизнес проектов. </value>
+	</data>
+	<data name="PersonThemesNull">
+		<value>У которых типы отсутствуют. </value>
+	</data>
+</root>

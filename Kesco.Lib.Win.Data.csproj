@@ -1,0 +1,2422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88C502A2-4FCD-4D27-9D6D-74ED1A5F3C8F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Data</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Kesco.Lib.Win.Data</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/Win.Data/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;CLEAR</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\_Application\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE, CLEAR</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;CLEAR</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\_Application\</OutputPath>
+    <BaseIntermediateOutputPath>..\_Obj\Data\</BaseIntermediateOutputPath>
+    <DefineConstants>TRACE, CLEAR</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseWithAdvancedLogging|AnyCPU'">
+    <OutputPath>bin\ReleaseWithAdvancedLogging\</OutputPath>
+    <DefineConstants>TRACE, CLEAR,AdvancedLogging</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\_Release\Data.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseWithAdvancedLogging|x86'">
+    <OutputPath>bin\x86\ReleaseWithAdvancedLogging\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TRACE, CLEAR,AdvancedLogging</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>false</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\_Application\Data.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Base.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\BaseCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\BaseEE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\BeforeChangeEventArgs.cs" />
+    <Compile Include="Business\Corporate\Employee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Corporate\EmployeeOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Documents\Document.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Documents\DocumentOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Documents\DocumentType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Documents\DocumentTypeOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Documents\Folder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Documents\FolderRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Documents\FolderRuleOptions\Document.cs" />
+    <Compile Include="Business\Documents\FolderRuleOptions\DocumentType.cs" />
+    <Compile Include="Business\Documents\FolderRuleOptions\MessageFrom.cs" />
+    <Compile Include="Business\Documents\FolderRuleOptions\MessageText.cs" />
+    <Compile Include="Business\Documents\FolderRuleOptions\MessageTo.cs" />
+    <Compile Include="Business\Documents\FolderRuleOptions\NoDocument.cs" />
+    <Compile Include="Business\Documents\FolderRuleOptions\NotMessageText.cs" />
+    <Compile Include="Business\Documents\FolderRuleOptions\NoPerson.cs" />
+    <Compile Include="Business\Documents\FolderRuleOptions\NotSignetBy.cs" />
+    <Compile Include="Business\Documents\FolderRuleOptions\Person.cs" />
+    <Compile Include="Business\Documents\FolderRuleOptions\SignetBy.cs" />
+    <Compile Include="Business\Persons\Person.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\Persons\PersonOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\States.cs" />
+    <Compile Include="Business\V2\Base.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\BaseEE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\Buh\BuhModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\ContextParams.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\Corporate\CorporateModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\Corporate\DomainObjects\Role.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\DBModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\Docs\DocsModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\Docs\DomainObjects\Doc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\Docs\DomainObjects\DocType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\Docs\DomainObjects\DsoDoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\Docs\DomainObjects\Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\Docs\DSDocs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDocs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Business\V2\Dso.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\Entity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\FilterOptions\FOpt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\FilterOptions\FOptDateTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\FilterOptions\FOptDoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\FilterOptions\FOptEmployee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\FilterOptions\FOptFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\FilterOptions\FOptInt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\FilterOptions\FOptItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\FilterOptions\FOptItemFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\FilterOptions\FOptPerson.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\FilterOptions\FOptText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\IReaderListener.cs" />
+    <Compile Include="Business\V2\PagedReaderListener.cs" />
+    <Compile Include="Business\V2\Persons\PersonsModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\V2\PropChangedEventArgs.cs" />
+    <Compile Include="Business\V2\ReaderHelper.cs" />
+    <Compile Include="Business\V2\ReaderListener.cs" />
+    <Compile Include="Business\V2\TreeNodeEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CodeManagment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Buhgalteriya\BuhDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Buhgalteriya\EconomicFieldDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Buhgalteriya\Field1CDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Buhgalteriya\TransactionsDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Buhgalteriya\Type1CDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Corporate\EmployeeDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Corporate\LanguageDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Corporate\PhoneDALC.cs">
+    </Compile>
+    <Compile Include="DALC\Corporate\ReplacementEmployeeDACL.cs" />
+    <Compile Include="DALC\Corporate\RequestDALC.cs" />
+    <Compile Include="DALC\Corporate\Roles.cs" />
+    <Compile Include="DALC\Corporate\RuleDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\DALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Directory\AreaDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Directory\BusinessProjectDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Directory\FaxRecipientDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Directory\OPFormsDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Directory\PersonDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Directory\PersonLinkDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Directory\ResourceDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Directory\StoryDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Directory\TypesPersonDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Directory\UnitDimensionDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\ArchiveDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\BuhParamDocDalc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\DocDataDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\DocImageDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\DocLinksDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\DocSignatureDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\DocTreeSPDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\DocTypeDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\DocTypeLinksDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\DocumentDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\ErrorMessageDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\FaxDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\FaxFolderDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\FaxInDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\FaxOutDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\FieldDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\FieldTypeDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\FolderDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\FolderRuleDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\LogEmailDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\MailingListDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\MessageDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\New Search\Base\AllAnyAttribute.cs" />
+    <Compile Include="DALC\Documents\New Search\Base\NumericTypeAttribute.cs" />
+    <Compile Include="DALC\Documents\PersonsUsedDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\PrintDataDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\QueryDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\1C\Бухгалтерский.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\1C\НеПроведен.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\1C\Проведен.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Contract\LinkedToByCurator.cs" />
+    <Compile Include="DALC\Documents\Search\Document\ChangedBy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Document\ВРаботе.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Document\Дата.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Document\КодДокумента.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Document\ЛицаКонтрагенты.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Document\Название.cs" />
+    <Compile Include="DALC\Documents\Search\Document\Номер.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Document\Описание.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Document\СтрокаПоиска.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Document\ТипДокумента.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\EForm\ChangedBy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Contract\LinkedToByCuratorMe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\EForm\ChangedByMe.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\NoSign\НеВыполнен.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\NoSign\НеПодписан.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\NoSign\НеПодписанМной.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\Sign\Sign.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\Sign\Выполнен.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\Sign\ДатаВыполнения.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\Sign\ДатаПодписания.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\Sign\Подписан.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\Sign\ПодписанМной.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\ДатаОплаты.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\ОтсутствуетПечатнаяФорма.cs" />
+    <Compile Include="DALC\Documents\Search\Image\NoSign\NoSign.cs" />
+    <Compile Include="DALC\Documents\Search\Image\NoSign\НеИмеетШтампов.cs" />
+    <Compile Include="DALC\Documents\Search\Image\NoSign\НеАннулирован.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\NoSign\НеПодписан.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\NoSign\НеПодписанМной.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\Sign\ИмеетШтампы.cs" />
+    <Compile Include="DALC\Documents\Search\Image\Sign\Sign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\Sign\Аннулировано.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\Sign\ДатаАннулирования.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\Sign\ДатаПодписания.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\Sign\Подписан.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\Sign\ПодписанМной.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\EForm\СуммаДокумента.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\EForm\ПечатнаяФорма.cs" />
+    <Compile Include="DALC\Documents\Search\EForm\ЭлФорма.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\EForm\ЭлФормаОтсутствует.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\FolderRules\Document.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\FolderRules\DocumentType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\FolderRules\FolderRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\FolderRules\Incoming\MessageFrom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\FolderRules\MessageText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\FolderRules\Outgoing\MessageIn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\FolderRules\Person.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\FolderRules\SignedBy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Group.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\ChangedBy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\NotSend\NotSend.cs" />
+    <Compile Include="DALC\Documents\Search\Image\NotSend\ДатаНеОтправлялось.cs" />
+    <Compile Include="DALC\Documents\Search\Image\Send\Send.cs" />
+    <Compile Include="DALC\Documents\Search\Image\Sign\УстановленДСП.cs" />
+    <Compile Include="DALC\Documents\Search\Image\ИзмененоХранилище.cs" />
+    <Compile Include="DALC\Documents\Search\Image\ИзменилХранилище.cs" />
+    <Compile Include="DALC\Documents\Search\Image\КоличествоСтраниц.cs" />
+    <Compile Include="DALC\Documents\Search\Image\Получено.cs" />
+    <Compile Include="DALC\Documents\Search\Image\NotSend\НеОтправлял.cs" />
+    <Compile Include="DALC\Documents\Search\Image\Image.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\ДатаАрхивирования.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\ДатаИзменения.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\Изображение.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\ИзображениеОтсутствует.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\РазмерИзображения.cs" />
+    <Compile Include="DALC\Documents\Search\Image\Сохранил.cs" />
+    <Compile Include="DALC\Documents\Search\Image\ТипФайлаИзображения.cs" />
+    <Compile Include="DALC\Documents\Search\Image\Хранилище.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Links\НетТипаВытекающего.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Links\НетТипаОснования.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Links\СвязанСДокументом.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Links\ТипВытекающего.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Links\ТипОснования.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\FromTo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Incoming\Incoming.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Incoming\Incoming_By.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Incoming\Incoming_Chief.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Incoming\Incoming_Date.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Incoming\Incoming_Employee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Incoming\Incoming_Read.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Incoming\Incoming_Text.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Incoming\Incoming_Unread.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Outgoing\Outgoing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Outgoing\Outgoing_By.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Outgoing\Outgoing_Date.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Message\Outgoing\Outgoing_Text.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Option.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Options.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\DateOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\EmployeeListOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\EmployeeOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\EmployeeTwoValueListOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\ListOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\MinMaxOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\MyOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\PersonListOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\PersonOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\TextListOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\TextOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\TwoListValueOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Patterns\ValueOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\Send\Отправитель.cs" />
+    <Compile Include="DALC\Documents\Search\Image\Send\ДатаОтправки.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Image\Send\ТипОтправки.cs" />
+    <Compile Include="DALC\Documents\Search\Transaction\ДатаФиноперации.cs" />
+    <Compile Include="DALC\Documents\Search\Transaction\ТипФиноперации.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Transaction\Финоперации.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Transaction\ФиноперацииОтсутствуют.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Transaction\ФиноперацияОснование.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\Transaction\ФиноперацияПодтверждение.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\Search\UnsupportedOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\SettingsDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\SettingsPrintFormDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\SharedFolderDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\SignMessageTextDALC.cs" />
+    <Compile Include="DALC\Documents\StampChecksDALC.cs" />
+    <Compile Include="DALC\Documents\StampDALC.cs" />
+    <Compile Include="DALC\Documents\StampRightsDALC.cs" />
+    <Compile Include="DALC\Documents\TableColumnDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\TransactionDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\TransactionTypeDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\UnSubscribeDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\URLsDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\Documents\WorkDocDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\LocalObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DALC\TreeDALC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DateSpan.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Env.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Options\DateIntervalOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Options\DecimalIntervalOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Options\ListOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Options\Option.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Options\OptionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Options\SimpleTextOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repository\DocumentRepository.cs" />
+    <Compile Include="Repository\IDocumentRepository.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StringResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Temp\KescoDate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Temp\Objects\StampAddItem.cs" />
+    <Compile Include="Temp\Objects\StampItem.cs" />
+    <Compile Include="Temp\Objects\Employee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Temp\Objects\IDObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Temp\Objects\MailingList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Temp\Objects\SignItem.cs" />
+    <Compile Include="Temp\Objects\StampRights.cs" />
+    <Compile Include="Temp\Objects\StampRule.cs" />
+    <Compile Include="Types\KBoolean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Types\KDate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Types\KDateTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Types\KDecimal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Types\KInt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Types\KString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Types\KType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="Business\V2\Docs\DSDocs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDocs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Document.et.resx">
+      <DependentUpon>Document.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\DocumentType.et.resx">
+      <DependentUpon>DocumentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Incoming\MessageFrom.et.resx">
+      <DependentUpon>MessageFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\MessageText.et.resx">
+      <DependentUpon>MessageText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Outgoing\MessageIn.et.resx">
+      <DependentUpon>MessageIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Person.et.resx">
+      <DependentUpon>Person.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\SignedBy.et.resx">
+      <DependentUpon>SignedBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Employee.et.resx">
+      <DependentUpon>Incoming_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\EmployeeListOption.et.resx">
+      <DependentUpon>EmployeeListOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\EmployeeOption.et.resx">
+      <DependentUpon>EmployeeOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\ListOption.et.resx">
+      <DependentUpon>ListOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\MinMaxOption.et.resx">
+      <DependentUpon>MinMaxOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\TextOption.et.resx">
+      <DependentUpon>TextOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringResources.ru.resx" />
+    <None Include="Business\V2\Docs\DSDocs.xsx">
+      <DependentUpon>DSDocs.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\Бухгалтерский.en.resx">
+      <DependentUpon>Бухгалтерский.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\Бухгалтерский.et.resx">
+      <DependentUpon>Бухгалтерский.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\Бухгалтерский.resx">
+      <DependentUpon>Бухгалтерский.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\Бухгалтерский.ru.resx">
+      <DependentUpon>Бухгалтерский.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\НеПроведен.en.resx">
+      <DependentUpon>НеПроведен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\НеПроведен.et.resx">
+      <DependentUpon>НеПроведен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\НеПроведен.resx">
+      <DependentUpon>НеПроведен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\НеПроведен.ru.resx">
+      <DependentUpon>НеПроведен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\Проведен.en.resx">
+      <DependentUpon>Проведен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\Проведен.et.resx">
+      <DependentUpon>Проведен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\Проведен.resx">
+      <DependentUpon>Проведен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\1C\Проведен.ru.resx">
+      <DependentUpon>Проведен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Contract\LinkedToByCurator.en.resx">
+      <DependentUpon>LinkedToByCurator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Contract\LinkedToByCurator.et.resx">
+      <DependentUpon>LinkedToByCurator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Contract\LinkedToByCurator.resx">
+      <DependentUpon>LinkedToByCurator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Contract\LinkedToByCurator.ru.resx">
+      <DependentUpon>LinkedToByCurator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Contract\LinkedToByCuratorMe.et.resx">
+      <DependentUpon>LinkedToByCuratorMe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Contract\LinkedToByCuratorMe.ru.resx">
+      <DependentUpon>LinkedToByCuratorMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ChangedBy.en.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ChangedBy.et.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ChangedBy.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ChangedBy.ru.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ВРаботе.en.resx">
+      <DependentUpon>ВРаботе.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ВРаботе.et.resx">
+      <DependentUpon>ВРаботе.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ВРаботе.resx">
+      <DependentUpon>ВРаботе.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ВРаботе.ru.resx">
+      <DependentUpon>ВРаботе.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Дата.en.resx">
+      <DependentUpon>Дата.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Дата.et.resx">
+      <DependentUpon>Дата.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Дата.resx">
+      <DependentUpon>Дата.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Дата.ru.resx">
+      <DependentUpon>Дата.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\КодДокумента.en.resx">
+      <DependentUpon>КодДокумента.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\КодДокумента.et.resx">
+      <DependentUpon>КодДокумента.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\КодДокумента.resx">
+      <DependentUpon>КодДокумента.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\КодДокумента.ru.resx">
+      <DependentUpon>КодДокумента.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ЛицаКонтрагенты.en.resx">
+      <DependentUpon>ЛицаКонтрагенты.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ЛицаКонтрагенты.et.resx">
+      <DependentUpon>ЛицаКонтрагенты.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ЛицаКонтрагенты.resx">
+      <DependentUpon>ЛицаКонтрагенты.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ЛицаКонтрагенты.ru.resx">
+      <DependentUpon>ЛицаКонтрагенты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Название.en.resx">
+      <DependentUpon>Название.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Название.et.resx">
+      <DependentUpon>Название.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Название.resx">
+      <DependentUpon>Название.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Название.ru.resx">
+      <DependentUpon>Название.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Номер.en.resx">
+      <DependentUpon>Номер.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Номер.et.resx">
+      <DependentUpon>Номер.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Номер.resx">
+      <DependentUpon>Номер.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Номер.ru.resx">
+      <DependentUpon>Номер.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Описание.en.resx">
+      <DependentUpon>Описание.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Описание.et.resx">
+      <DependentUpon>Описание.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Описание.resx">
+      <DependentUpon>Описание.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Описание.ru.resx">
+      <DependentUpon>Описание.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\СтрокаПоиска.en.resx">
+      <DependentUpon>СтрокаПоиска.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\СтрокаПоиска.et.resx">
+      <DependentUpon>СтрокаПоиска.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\СтрокаПоиска.resx">
+      <DependentUpon>СтрокаПоиска.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\СтрокаПоиска.ru.resx">
+      <DependentUpon>СтрокаПоиска.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ТипДокумента.en.resx">
+      <DependentUpon>ТипДокумента.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ТипДокумента.et.resx">
+      <DependentUpon>ТипДокумента.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ТипДокумента.resx">
+      <DependentUpon>ТипДокумента.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\ТипДокумента.ru.resx">
+      <DependentUpon>ТипДокумента.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ChangedBy.en.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ChangedBy.et.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ChangedBy.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Contract\LinkedToByCuratorMe.en.resx">
+      <DependentUpon>LinkedToByCuratorMe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Contract\LinkedToByCuratorMe.resx">
+      <DependentUpon>LinkedToByCuratorMe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ChangedBy.ru.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ChangedByMe.en.resx">
+      <DependentUpon>ChangedByMe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ChangedByMe.et.resx">
+      <DependentUpon>ChangedByMe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ChangedByMe.resx">
+      <DependentUpon>ChangedByMe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ChangedByMe.ru.resx">
+      <DependentUpon>ChangedByMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеВыполнен.en.resx">
+      <DependentUpon>НеВыполнен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеВыполнен.et.resx">
+      <DependentUpon>НеВыполнен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеВыполнен.resx">
+      <DependentUpon>НеВыполнен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеВыполнен.ru.resx">
+      <DependentUpon>НеВыполнен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписан.en.resx">
+      <DependentUpon>НеПодписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписан.et.resx">
+      <DependentUpon>НеПодписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписан.resx">
+      <DependentUpon>НеПодписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписан.ru.resx">
+      <DependentUpon>НеПодписан.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписанМной.en.resx">
+      <DependentUpon>НеПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписанМной.et.resx">
+      <DependentUpon>НеПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписанМной.resx">
+      <DependentUpon>НеПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписанМной.ru.resx">
+      <DependentUpon>НеПодписанМной.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\Выполнен.en.resx">
+      <DependentUpon>Выполнен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\Выполнен.et.resx">
+      <DependentUpon>Выполнен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\Выполнен.resx">
+      <DependentUpon>Выполнен.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\Выполнен.ru.resx">
+      <DependentUpon>Выполнен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ДатаВыполнения.en.resx">
+      <DependentUpon>ДатаВыполнения.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ДатаВыполнения.et.resx">
+      <DependentUpon>ДатаВыполнения.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ДатаВыполнения.resx">
+      <DependentUpon>ДатаВыполнения.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ДатаВыполнения.ru.resx">
+      <DependentUpon>ДатаВыполнения.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ДатаПодписания.en.resx">
+      <DependentUpon>ДатаПодписания.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ДатаПодписания.et.resx">
+      <DependentUpon>ДатаПодписания.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ДатаПодписания.resx">
+      <DependentUpon>ДатаПодписания.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ДатаПодписания.ru.resx">
+      <DependentUpon>ДатаПодписания.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\Подписан.en.resx">
+      <DependentUpon>Подписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\Подписан.et.resx">
+      <DependentUpon>Подписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\Подписан.resx">
+      <DependentUpon>Подписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\Подписан.ru.resx">
+      <DependentUpon>Подписан.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ПодписанМной.en.resx">
+      <DependentUpon>ПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ПодписанМной.et.resx">
+      <DependentUpon>ПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ПодписанМной.resx">
+      <DependentUpon>ПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ПодписанМной.ru.resx">
+      <DependentUpon>ПодписанМной.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ДатаОплаты.en.resx">
+      <DependentUpon>ДатаОплаты.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ДатаОплаты.et.resx">
+      <DependentUpon>ДатаОплаты.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ДатаОплаты.resx">
+      <DependentUpon>ДатаОплаты.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ДатаОплаты.ru.resx">
+      <DependentUpon>ДатаОплаты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ОтсутствуетПечатнаяФорма.en.resx">
+      <DependentUpon>ОтсутствуетПечатнаяФорма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ОтсутствуетПечатнаяФорма.et.resx">
+      <DependentUpon>ОтсутствуетПечатнаяФорма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ОтсутствуетПечатнаяФорма.resx">
+      <DependentUpon>ОтсутствуетПечатнаяФорма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ОтсутствуетПечатнаяФорма.ru.resx">
+      <DependentUpon>ОтсутствуетПечатнаяФорма.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ПечатнаяФорма.et.resx">
+      <DependentUpon>ПечатнаяФорма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ПечатнаяФорма.ru.resx">
+      <DependentUpon>ПечатнаяФорма.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\СуммаДокумента.et.resx">
+      <DependentUpon>СуммаДокумента.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\СуммаДокумента.ru.resx">
+      <DependentUpon>СуммаДокумента.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ЭлФорма.et.resx">
+      <DependentUpon>ЭлФорма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ЭлФорма.ru.resx">
+      <DependentUpon>ЭлФорма.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ЭлФормаОтсутствует.et.resx">
+      <DependentUpon>ЭлФормаОтсутствует.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ЭлФормаОтсутствует.ru.resx">
+      <DependentUpon>ЭлФормаОтсутствует.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Document.ru.resx">
+      <DependentUpon>Document.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\DocumentType.ru.resx">
+      <DependentUpon>DocumentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Incoming\MessageFrom.ru.resx">
+      <DependentUpon>MessageFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\MessageText.ru.resx">
+      <DependentUpon>MessageText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Outgoing\MessageIn.ru.resx">
+      <DependentUpon>MessageIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Person.ru.resx">
+      <DependentUpon>Person.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\SignedBy.ru.resx">
+      <DependentUpon>SignedBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ChangedBy.et.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ChangedBy.ru.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеАннулирован.et.resx">
+      <DependentUpon>НеАннулирован.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеАннулирован.ru.resx">
+      <DependentUpon>НеАннулирован.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеИмеетШтампов.en.resx">
+      <DependentUpon>НеИмеетШтампов.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеИмеетШтампов.et.resx">
+      <DependentUpon>НеИмеетШтампов.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеИмеетШтампов.resx">
+      <DependentUpon>НеИмеетШтампов.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеАннулирован.en.resx">
+      <DependentUpon>НеАннулирован.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеАннулирован.resx">
+      <DependentUpon>НеАннулирован.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеИмеетШтампов.ru.resx">
+      <DependentUpon>НеИмеетШтампов.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеПодписан.en.resx">
+      <DependentUpon>НеПодписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеПодписан.et.resx">
+      <DependentUpon>НеПодписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеПодписан.resx">
+      <DependentUpon>НеПодписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеПодписан.ru.resx">
+      <DependentUpon>НеПодписан.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеПодписанМной.en.resx">
+      <DependentUpon>НеПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеПодписанМной.et.resx">
+      <DependentUpon>НеПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеПодписанМной.resx">
+      <DependentUpon>НеПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NoSign\НеПодписанМной.ru.resx">
+      <DependentUpon>НеПодписанМной.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\NotSend.et.resx">
+      <DependentUpon>NotSend.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\NotSend.ru.resx">
+      <DependentUpon>NotSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\ДатаНеОтправлялось.et.resx">
+      <DependentUpon>ДатаНеОтправлялось.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\ДатаНеОтправлялось.ru.resx">
+      <DependentUpon>ДатаНеОтправлялось.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\НеОтправлял.et.resx">
+      <DependentUpon>НеОтправлял.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\НеОтправлял.ru.resx">
+      <DependentUpon>НеОтправлял.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\Send.et.resx">
+      <DependentUpon>Send.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\Send.ru.resx">
+      <DependentUpon>Send.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\ДатаОтправки.et.resx">
+      <DependentUpon>ДатаОтправки.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\ДатаОтправки.ru.resx">
+      <DependentUpon>ДатаОтправки.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\Отправитель.et.resx">
+      <DependentUpon>Отправитель.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\Отправитель.ru.resx">
+      <DependentUpon>Отправитель.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\ТипОтправки.et.resx">
+      <DependentUpon>ТипОтправки.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\ТипОтправки.ru.resx">
+      <DependentUpon>ТипОтправки.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\Аннулировано.et.resx">
+      <DependentUpon>Аннулировано.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\Аннулировано.ru.resx">
+      <DependentUpon>Аннулировано.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ДатаАннулирования.et.resx">
+      <DependentUpon>ДатаАннулирования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ДатаАннулирования.ru.resx">
+      <DependentUpon>ДатаАннулирования.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ДатаПодписания.et.resx">
+      <DependentUpon>ДатаПодписания.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ДатаПодписания.ru.resx">
+      <DependentUpon>ДатаПодписания.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ИмеетШтампы.en.resx">
+      <DependentUpon>ИмеетШтампы.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ИмеетШтампы.et.resx">
+      <DependentUpon>ИмеетШтампы.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ИмеетШтампы.resx">
+      <DependentUpon>ИмеетШтампы.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\Аннулировано.en.resx">
+      <DependentUpon>Аннулировано.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\Аннулировано.resx">
+      <DependentUpon>Аннулировано.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ДатаАннулирования.en.resx">
+      <DependentUpon>ДатаАннулирования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ДатаАннулирования.resx">
+      <DependentUpon>ДатаАннулирования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ДатаПодписания.en.resx">
+      <DependentUpon>ДатаПодписания.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ДатаПодписания.resx">
+      <DependentUpon>ДатаПодписания.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ИмеетШтампы.ru.resx">
+      <DependentUpon>ИмеетШтампы.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\Подписан.en.resx">
+      <DependentUpon>Подписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\Подписан.et.resx">
+      <DependentUpon>Подписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\Подписан.resx">
+      <DependentUpon>Подписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\Подписан.ru.resx">
+      <DependentUpon>Подписан.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ПодписанМной.en.resx">
+      <DependentUpon>ПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ПодписанМной.et.resx">
+      <DependentUpon>ПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ПодписанМной.resx">
+      <DependentUpon>ПодписанМной.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\СуммаДокумента.en.resx">
+      <DependentUpon>СуммаДокумента.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\СуммаДокумента.resx">
+      <DependentUpon>СуммаДокумента.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ПечатнаяФорма.en.resx">
+      <DependentUpon>ПечатнаяФорма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ПечатнаяФорма.resx">
+      <DependentUpon>ПечатнаяФорма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ЭлФорма.en.resx">
+      <DependentUpon>ЭлФорма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ЭлФорма.resx">
+      <DependentUpon>ЭлФорма.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ЭлФормаОтсутствует.en.resx">
+      <DependentUpon>ЭлФормаОтсутствует.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\EForm\ЭлФормаОтсутствует.resx">
+      <DependentUpon>ЭлФормаОтсутствует.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Document.en.resx">
+      <DependentUpon>Document.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Document.resx">
+      <DependentUpon>Document.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\DocumentType.en.resx">
+      <DependentUpon>DocumentType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\DocumentType.resx">
+      <DependentUpon>DocumentType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Incoming\MessageFrom.en.resx">
+      <DependentUpon>MessageFrom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Incoming\MessageFrom.resx">
+      <DependentUpon>MessageFrom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\MessageText.en.resx">
+      <DependentUpon>MessageText.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\MessageText.resx">
+      <DependentUpon>MessageText.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Outgoing\MessageIn.en.resx">
+      <DependentUpon>MessageIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Outgoing\MessageIn.resx">
+      <DependentUpon>MessageIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Person.en.resx">
+      <DependentUpon>Person.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Person.resx">
+      <DependentUpon>Person.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\SignedBy.en.resx">
+      <DependentUpon>SignedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\FolderRules\SignedBy.resx">
+      <DependentUpon>SignedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ChangedBy.en.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ChangedBy.resx">
+      <DependentUpon>ChangedBy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\NotSend.en.resx">
+      <DependentUpon>NotSend.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\NotSend.resx">
+      <DependentUpon>NotSend.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\ДатаНеОтправлялось.en.resx">
+      <DependentUpon>ДатаНеОтправлялось.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\ДатаНеОтправлялось.resx">
+      <DependentUpon>ДатаНеОтправлялось.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\Send.en.resx">
+      <DependentUpon>Send.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\Send.resx">
+      <DependentUpon>Send.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\ПодписанМной.ru.resx">
+      <DependentUpon>ПодписанМной.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\УстановленДСП.en.resx">
+      <DependentUpon>УстановленДСП.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\УстановленДСП.et.resx">
+      <DependentUpon>УстановленДСП.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\УстановленДСП.resx">
+      <DependentUpon>УстановленДСП.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Sign\УстановленДСП.ru.resx">
+      <DependentUpon>УстановленДСП.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ДатаАрхивирования.et.resx">
+      <DependentUpon>ДатаАрхивирования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ДатаАрхивирования.ru.resx">
+      <DependentUpon>ДатаАрхивирования.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ДатаИзменения.et.resx">
+      <DependentUpon>ДатаИзменения.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ДатаИзменения.ru.resx">
+      <DependentUpon>ДатаИзменения.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзмененоХранилище.en.resx">
+      <DependentUpon>ИзмененоХранилище.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзмененоХранилище.et.resx">
+      <DependentUpon>ИзмененоХранилище.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзмененоХранилище.resx">
+      <DependentUpon>ИзмененоХранилище.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзмененоХранилище.ru.resx">
+      <DependentUpon>ИзмененоХранилище.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзменилХранилище.en.resx">
+      <DependentUpon>ИзменилХранилище.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзменилХранилище.et.resx">
+      <DependentUpon>ИзменилХранилище.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзменилХранилище.resx">
+      <DependentUpon>ИзменилХранилище.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзменилХранилище.ru.resx">
+      <DependentUpon>ИзменилХранилище.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Изображение.et.resx">
+      <DependentUpon>Изображение.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Изображение.ru.resx">
+      <DependentUpon>Изображение.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзображениеОтсутствует.et.resx">
+      <DependentUpon>ИзображениеОтсутствует.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзображениеОтсутствует.ru.resx">
+      <DependentUpon>ИзображениеОтсутствует.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\КоличествоСтраниц.en.resx">
+      <DependentUpon>КоличествоСтраниц.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\КоличествоСтраниц.et.resx">
+      <DependentUpon>КоличествоСтраниц.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\КоличествоСтраниц.resx">
+      <DependentUpon>КоличествоСтраниц.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\КоличествоСтраниц.ru.resx">
+      <DependentUpon>КоличествоСтраниц.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Получено.en.resx">
+      <DependentUpon>Получено.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Получено.et.resx">
+      <DependentUpon>Получено.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Получено.resx">
+      <DependentUpon>Получено.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\НеОтправлял.en.resx">
+      <DependentUpon>НеОтправлял.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\NotSend\НеОтправлял.resx">
+      <DependentUpon>НеОтправлял.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ДатаАрхивирования.en.resx">
+      <DependentUpon>ДатаАрхивирования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ДатаАрхивирования.resx">
+      <DependentUpon>ДатаАрхивирования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ДатаИзменения.en.resx">
+      <DependentUpon>ДатаИзменения.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ДатаИзменения.resx">
+      <DependentUpon>ДатаИзменения.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Изображение.en.resx">
+      <DependentUpon>Изображение.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Изображение.resx">
+      <DependentUpon>Изображение.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзображениеОтсутствует.en.resx">
+      <DependentUpon>ИзображениеОтсутствует.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ИзображениеОтсутствует.resx">
+      <DependentUpon>ИзображениеОтсутствует.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Получено.ru.resx">
+      <DependentUpon>Получено.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\РазмерИзображения.en.resx">
+      <DependentUpon>РазмерИзображения.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\РазмерИзображения.et.resx">
+      <DependentUpon>РазмерИзображения.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\РазмерИзображения.resx">
+      <DependentUpon>РазмерИзображения.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\РазмерИзображения.ru.resx">
+      <DependentUpon>РазмерИзображения.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Сохранил.en.resx">
+      <DependentUpon>Сохранил.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Сохранил.et.resx">
+      <DependentUpon>Сохранил.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Сохранил.resx">
+      <DependentUpon>Сохранил.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Сохранил.ru.resx">
+      <DependentUpon>Сохранил.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ТипФайлаИзображения.en.resx">
+      <DependentUpon>ТипФайлаИзображения.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ТипФайлаИзображения.et.resx">
+      <DependentUpon>ТипФайлаИзображения.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ТипФайлаИзображения.resx">
+      <DependentUpon>ТипФайлаИзображения.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\ТипФайлаИзображения.ru.resx">
+      <DependentUpon>ТипФайлаИзображения.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Хранилище.en.resx">
+      <DependentUpon>Хранилище.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Хранилище.et.resx">
+      <DependentUpon>Хранилище.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Хранилище.resx">
+      <DependentUpon>Хранилище.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Хранилище.ru.resx">
+      <DependentUpon>Хранилище.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\НетТипаВытекающего.en.resx">
+      <DependentUpon>НетТипаВытекающего.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\НетТипаВытекающего.et.resx">
+      <DependentUpon>НетТипаВытекающего.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\НетТипаВытекающего.resx">
+      <DependentUpon>НетТипаВытекающего.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\НетТипаВытекающего.ru.resx">
+      <DependentUpon>НетТипаВытекающего.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\НетТипаОснования.en.resx">
+      <DependentUpon>НетТипаОснования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\НетТипаОснования.et.resx">
+      <DependentUpon>НетТипаОснования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\НетТипаОснования.resx">
+      <DependentUpon>НетТипаОснования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\НетТипаОснования.ru.resx">
+      <DependentUpon>НетТипаОснования.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\СвязанСДокументом.en.resx">
+      <DependentUpon>СвязанСДокументом.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\СвязанСДокументом.et.resx">
+      <DependentUpon>СвязанСДокументом.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\СвязанСДокументом.resx">
+      <DependentUpon>СвязанСДокументом.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\СвязанСДокументом.ru.resx">
+      <DependentUpon>СвязанСДокументом.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\ТипВытекающего.en.resx">
+      <DependentUpon>ТипВытекающего.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\ТипВытекающего.et.resx">
+      <DependentUpon>ТипВытекающего.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\ТипВытекающего.resx">
+      <DependentUpon>ТипВытекающего.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\ТипВытекающего.ru.resx">
+      <DependentUpon>ТипВытекающего.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\ТипОснования.en.resx">
+      <DependentUpon>ТипОснования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\ТипОснования.et.resx">
+      <DependentUpon>ТипОснования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\ТипОснования.resx">
+      <DependentUpon>ТипОснования.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Links\ТипОснования.ru.resx">
+      <DependentUpon>ТипОснования.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\FromTo.en.resx">
+      <DependentUpon>FromTo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\FromTo.et.resx">
+      <DependentUpon>FromTo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\FromTo.resx">
+      <DependentUpon>FromTo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\FromTo.ru.resx">
+      <DependentUpon>FromTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming.en.resx">
+      <DependentUpon>Incoming.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming.et.resx">
+      <DependentUpon>Incoming.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming.resx">
+      <DependentUpon>Incoming.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming.ru.resx">
+      <DependentUpon>Incoming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_By.en.resx">
+      <DependentUpon>Incoming_By.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_By.et.resx">
+      <DependentUpon>Incoming_By.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_By.resx">
+      <DependentUpon>Incoming_By.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_By.ru.resx">
+      <DependentUpon>Incoming_By.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Chief.en.resx">
+      <DependentUpon>Incoming_Chief.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Chief.resx">
+      <DependentUpon>Incoming_Chief.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Chief.ru.resx">
+      <DependentUpon>Incoming_Chief.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Date.en.resx">
+      <DependentUpon>Incoming_Date.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Date.et.resx">
+      <DependentUpon>Incoming_Date.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Date.resx">
+      <DependentUpon>Incoming_Date.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Date.ru.resx">
+      <DependentUpon>Incoming_Date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Employee.en.resx">
+      <DependentUpon>Incoming_Employee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Employee.resx">
+      <DependentUpon>Incoming_Employee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Employee.ru.resx">
+      <DependentUpon>Incoming_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Read.en.resx">
+      <DependentUpon>Incoming_Read.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Read.et.resx">
+      <DependentUpon>Incoming_Read.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Read.resx">
+      <DependentUpon>Incoming_Read.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Read.ru.resx">
+      <DependentUpon>Incoming_Read.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Text.en.resx">
+      <DependentUpon>Incoming_Text.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Text.et.resx">
+      <DependentUpon>Incoming_Text.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Text.resx">
+      <DependentUpon>Incoming_Text.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Text.ru.resx">
+      <DependentUpon>Incoming_Text.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Unread.en.resx">
+      <DependentUpon>Incoming_Unread.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Unread.et.resx">
+      <DependentUpon>Incoming_Unread.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Unread.resx">
+      <DependentUpon>Incoming_Unread.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Incoming\Incoming_Unread.ru.resx">
+      <DependentUpon>Incoming_Unread.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing.en.resx">
+      <DependentUpon>Outgoing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing.et.resx">
+      <DependentUpon>Outgoing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing.resx">
+      <DependentUpon>Outgoing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing.ru.resx">
+      <DependentUpon>Outgoing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_By.en.resx">
+      <DependentUpon>Outgoing_By.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_By.et.resx">
+      <DependentUpon>Outgoing_By.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_By.resx">
+      <DependentUpon>Outgoing_By.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_By.ru.resx">
+      <DependentUpon>Outgoing_By.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_Date.en.resx">
+      <DependentUpon>Outgoing_Date.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_Date.et.resx">
+      <DependentUpon>Outgoing_Date.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_Date.resx">
+      <DependentUpon>Outgoing_Date.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_Date.ru.resx">
+      <DependentUpon>Outgoing_Date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_Text.en.resx">
+      <DependentUpon>Outgoing_Text.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_Text.et.resx">
+      <DependentUpon>Outgoing_Text.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_Text.resx">
+      <DependentUpon>Outgoing_Text.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Message\Outgoing\Outgoing_Text.ru.resx">
+      <DependentUpon>Outgoing_Text.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Option.en.resx">
+      <DependentUpon>Option.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Option.et.resx">
+      <DependentUpon>Option.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Option.resx">
+      <DependentUpon>Option.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Option.ru.resx">
+      <DependentUpon>Option.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Options.en.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Options.et.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Options.ru.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\DateOption.en.resx">
+      <DependentUpon>DateOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\DateOption.et.resx">
+      <DependentUpon>DateOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\DateOption.resx">
+      <DependentUpon>DateOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\DateOption.ru.resx">
+      <DependentUpon>DateOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\EmployeeListOption.en.resx">
+      <DependentUpon>EmployeeListOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\EmployeeListOption.resx">
+      <DependentUpon>EmployeeListOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\EmployeeListOption.ru.resx">
+      <DependentUpon>EmployeeListOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\EmployeeOption.en.resx">
+      <DependentUpon>EmployeeOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\EmployeeOption.resx">
+      <DependentUpon>EmployeeOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\EmployeeOption.ru.resx">
+      <DependentUpon>EmployeeOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\ListOption.en.resx">
+      <DependentUpon>ListOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\ListOption.resx">
+      <DependentUpon>ListOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\ListOption.ru.resx">
+      <DependentUpon>ListOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\MinMaxOption.en.resx">
+      <DependentUpon>MinMaxOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\MinMaxOption.resx">
+      <DependentUpon>MinMaxOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\MinMaxOption.ru.resx">
+      <DependentUpon>MinMaxOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\TextOption.en.resx">
+      <DependentUpon>TextOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\TextOption.resx">
+      <DependentUpon>TextOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\Отправитель.en.resx">
+      <DependentUpon>Отправитель.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\Отправитель.resx">
+      <DependentUpon>Отправитель.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\ДатаОтправки.en.resx">
+      <DependentUpon>ДатаОтправки.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\ДатаОтправки.resx">
+      <DependentUpon>ДатаОтправки.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\ТипОтправки.en.resx">
+      <DependentUpon>ТипОтправки.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Image\Send\ТипОтправки.resx">
+      <DependentUpon>ТипОтправки.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Patterns\TextOption.ru.resx">
+      <DependentUpon>TextOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ДатаФиноперации.en.resx">
+      <DependentUpon>ДатаФиноперации.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ДатаФиноперации.et.resx">
+      <DependentUpon>ДатаФиноперации.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ДатаФиноперации.resx">
+      <DependentUpon>ДатаФиноперации.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ДатаФиноперации.ru.resx">
+      <DependentUpon>ДатаФиноперации.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ТипФиноперации.en.resx">
+      <DependentUpon>ТипФиноперации.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ТипФиноперации.et.resx">
+      <DependentUpon>ТипФиноперации.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ТипФиноперации.resx">
+      <DependentUpon>ТипФиноперации.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ТипФиноперации.ru.resx">
+      <DependentUpon>ТипФиноперации.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\Финоперации.en.resx">
+      <DependentUpon>Финоперации.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\Финоперации.et.resx">
+      <DependentUpon>Финоперации.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\Финоперации.resx">
+      <DependentUpon>Финоперации.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\Финоперации.ru.resx">
+      <DependentUpon>Финоперации.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацииОтсутствуют.en.resx">
+      <DependentUpon>ФиноперацииОтсутствуют.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацииОтсутствуют.et.resx">
+      <DependentUpon>ФиноперацииОтсутствуют.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацииОтсутствуют.resx">
+      <DependentUpon>ФиноперацииОтсутствуют.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацииОтсутствуют.ru.resx">
+      <DependentUpon>ФиноперацииОтсутствуют.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацияОснование.en.resx">
+      <DependentUpon>ФиноперацияОснование.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацияОснование.et.resx">
+      <DependentUpon>ФиноперацияОснование.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацияОснование.resx">
+      <DependentUpon>ФиноперацияОснование.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацияОснование.ru.resx">
+      <DependentUpon>ФиноперацияОснование.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацияПодтверждение.en.resx">
+      <DependentUpon>ФиноперацияПодтверждение.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацияПодтверждение.et.resx">
+      <DependentUpon>ФиноперацияПодтверждение.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацияПодтверждение.resx">
+      <DependentUpon>ФиноперацияПодтверждение.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Transaction\ФиноперацияПодтверждение.ru.resx">
+      <DependentUpon>ФиноперацияПодтверждение.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\UnsupportedOption.en.resx">
+      <DependentUpon>UnsupportedOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\UnsupportedOption.et.resx">
+      <DependentUpon>UnsupportedOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\UnsupportedOption.resx">
+      <DependentUpon>UnsupportedOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\UnsupportedOption.ru.resx">
+      <DependentUpon>UnsupportedOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringResources.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringResources.et.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Log\Kesco.Lib.Log.csproj">
+      <Project>{FC924B22-160A-4F7F-98EB-63E420DE694E}</Project>
+      <Name>Kesco.Lib.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Error\Kesco.Lib.Win.Error.csproj">
+      <Project>{A6E0282A-D134-40DD-8EFA-A3F6332B4EDD}</Project>
+      <Name>Kesco.Lib.Win.Error</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Win\Kesco.Lib.Win.csproj">
+      <Project>{9B40FE2D-9949-4151-BE04-7A17B522FF04}</Project>
+      <Name>Kesco.Lib.Win</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
