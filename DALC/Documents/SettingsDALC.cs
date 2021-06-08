@@ -30,8 +30,8 @@ namespace Kesco.Lib.Win.Data.DALC.Documents
 		public ArrayList LinkDocIDs;				// документы в дереве
 		public bool NeedSave;						// были изменения, необходимо сохранить.
         public byte ReadMessageOnEndWork = 2;       // прочитывать документ при завершении работы (Всегда/Никогда/ПоЗапросу)
-        public string PersonPrinter = "";    // принтер
-
+		public int FolderUpdateTime = -2;           // Время обновления папок запросов
+		public string PersonPrinter = "";    // принтер
 		private readonly SettingsDALC settingsData;
 
 		public UserSettings(SettingsDALC sData)
@@ -157,8 +157,16 @@ namespace Kesco.Lib.Win.Data.DALC.Documents
                     if (obj is byte)
                         ReadMessageOnEndWork = (byte)obj;
 
-                    // set printer default
-                    obj = dr[settingsData.PersonPrinterField];
+					// read message after ending work with document
+					if(dr.Table.Columns.Contains(SettingsDALC.FolderUpdateTimeField))
+					{
+						obj = dr[SettingsDALC.FolderUpdateTimeField];
+						if(obj is byte)
+							FolderUpdateTime = (byte)obj;
+					}
+
+					// set printer default
+					obj = dr[settingsData.PersonPrinterField];
                     if (obj is string)
                         PersonPrinter = (string)obj;
                 }
@@ -209,6 +217,7 @@ namespace Kesco.Lib.Win.Data.DALC.Documents
         private const string personIDField = "КодЛица";
         private const string sortMailingListByAuthorField = "ЛичныеСпискиРассылкиПоказыватьПервыми";
         private const string readMessageOnEndWorkField = "ПрочитыватьСообщениеПриЗавершенииРаботы";
+		public const string FolderUpdateTimeField = "ВремяОбновленияПапокЗапросов";
 	    private const string personPrinterField = "Принтер";
 
         private const string sp_Settings = "sp_Настройки";
@@ -383,7 +392,8 @@ namespace Kesco.Lib.Win.Data.DALC.Documents
 					messageOnEndSignFeild + " = @MessageOnEndSign, " +
                     sortMailingListByAuthorField + " = @SortMailingListByAuthor, " +
                     readMessageOnEndWorkField + " = @ReadMessageOnEndWork, " +
-                    personPrinterField + " = @PersonPrinter",
+					((us.FolderUpdateTime > -1)?FolderUpdateTimeField + " = @FolderUpdateTime, ":"") +
+					personPrinterField + " = @PersonPrinter",
 				new SqlConnection(connectionString));
 
 			if(us.PersonID>0)
@@ -405,6 +415,8 @@ namespace Kesco.Lib.Win.Data.DALC.Documents
 			AddParam(cmd, "@MessageOnEndSign", SqlDbType.Bit, (us.MessageOnEndSign ? 1 : 0));
             AddParam(cmd, "@SortMailingListByAuthor", SqlDbType.Bit, (us.SortMailingListByAuthor ? 1 : 0));
             AddParam(cmd, "@ReadMessageOnEndWork", SqlDbType.TinyInt, us.ReadMessageOnEndWork);
+			if(us.FolderUpdateTime > -1)
+				AddParam(cmd, "@FolderUpdateTime", SqlDbType.TinyInt, us.FolderUpdateTime);
 		    AddParam(cmd, "@PersonPrinter", SqlDbType.VarChar, us.PersonPrinter);
 
 			return CMD_Exec(cmd);

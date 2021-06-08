@@ -11,7 +11,7 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.NoSign
     /// Summary description for Ќе»меетЎтампов.
     /// </summary>
     [Option("Image.NoSing.Ќе»меетЎтампов", typeof (Ќе»меетЎтампов))]
-    public class Ќе»меетЎтампов : ListOption
+	public class Ќе»меетЎтампов : ListOption
     {
 
         protected Ќе»меетЎтампов(XmlElement el) : base(el)

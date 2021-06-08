@@ -287,7 +287,8 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
 			elSignImage.SetAttribute("name", "Image.Sign");
 			XmlElement elNoSignImage = doc.CreateElement("Option");
 			elNoSignImage.SetAttribute("name", "Image.NoSign");
-
+			//XmlElement elNoSignEform = doc.CreateElement("Option");
+			//elNoSignEform.SetAttribute("name", "ЭлФорма");
 
 			XmlNodeList list;
 			list = doc.SelectNodes("Options/Option[@name='Message.Incoming']");
@@ -296,7 +297,6 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
 			list = doc.SelectNodes("Options/Option[@name='Message.Outgoing']");
 			foreach(XmlElement elOption in list)
 				doc.DocumentElement.RemoveChild(elOption);
-
 			list = doc.SelectNodes("Options/Option[@name='Image.Image']");
 			foreach(XmlElement elOption in list)
 				doc.DocumentElement.RemoveChild(elOption);
@@ -312,10 +312,6 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
 			list = doc.SelectNodes("Options/Option[@name='Image.NoSign']");
 			foreach(XmlElement elOption in list)
 				doc.DocumentElement.RemoveChild(elOption);
-			list = doc.SelectNodes("Options/Option[@name='EForm.Sing']");
-			foreach(XmlElement elOption in list)
-				doc.DocumentElement.RemoveChild(elOption);
-
 			list = doc.SelectNodes("Options/Option");
 			foreach(XmlElement elOption in list)
 			{
@@ -377,6 +373,11 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
 					case "Image.NoSing.НеПодписанМной":
 						elNoSignImage.SetAttribute("enabled", "true");
 						break;
+					//case "EForm.NoSing.НеПодписан":
+					//case "EForm.NoSing.НеВыполнен":
+					//case "EForm.NoSing.НеПодписанМной":
+					//	elNoSignEform.SetAttribute("enabled", "true");
+					//	break;
 				}
 			}
 
@@ -396,6 +397,8 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
 				doc.DocumentElement.AppendChild(elSignImage);
 			if(elNoSignImage.Attributes.Count > 1)
 				doc.DocumentElement.AppendChild(elNoSignImage);
+			//if(elNoSignEform.Attributes.Count > 1 && doc.SelectNodes("Options/Option[@name='ЭлФорма']").Count == 0)
+			//	doc.DocumentElement.AppendChild(elNoSignEform);
 		}
 
 		public static string SelectFrom = "SELECT *	FROM Документы.dbo.vwДокументы as T0 WITH(NOLOCK)";
@@ -521,7 +524,7 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
 			{
 				if(elOption.GetAttribute("name") == "находится в Работе")
 					elOption.SetAttribute("name", "ВРаботе");
-				else if(elOption.GetAttribute("name") == "EForm.NoSing")
+				else if(elOption.GetAttribute("name") == "EForm.NoSing" || elOption.GetAttribute("name") == "EForm.NoSign")
 					continue;
 				option = Option.CreateOption(elOption);
 				s = option.GetText();

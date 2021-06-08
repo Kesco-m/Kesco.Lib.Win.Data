@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
@@ -17,11 +18,13 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
 
         private static Dictionary<string, Type> map;
 		private static Dictionary<string, Type> subsmap;
+		private static Dictionary<string, Type> sepmap;
 
-        protected XmlElement el;
+		protected XmlElement el;
         protected int groupID;
         protected int groupIndex;
         [Localizable(true)] private OptionAttribute meta;
+
 
         protected string shortTextPrefix;
         protected string shortTextPostfix;
@@ -47,29 +50,38 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
 
         protected Option(XmlElement el)
         {
-            var resourceManager = new ResourceManager(typeof (Option));
-            this.el = el;
-            meta = GetMeta(GetType());
+            try
+            {
+                if(el==null || el.OuterXml == null)
+                    return;
+                var resourceManager = new ResourceManager(typeof(Option));
+                this.el = el;
+                meta = GetMeta(GetType());
 
-            groupID = 0;
-            emptyValueText = resourceManager.GetString("emptyValueText");
+                groupID = 0;
+                emptyValueText = resourceManager.GetString("emptyValueText");
 
-            errorText = "";
+                errorText = "";
 
 
-            htmlLinkPrefix = "[<A href=#" + Meta.Name + ">";
-            htmlLinkPostfix = "</A>]";
+                htmlLinkPrefix = "[<A href=#" + Meta.Name + ">";
+                htmlLinkPostfix = "</A>]";
 
-            htmlItemPrefix = "<i>";
-            htmlItemPostfix = "</i>";
+                htmlItemPrefix = "<i>";
+                htmlItemPostfix = "</i>";
 
-            textItemPrefix = "";
-            textItemPostfix = "";
+                textItemPrefix = "";
+                textItemPostfix = "";
 
-            shortTextPrefix =
-                htmlPrefix = Meta.Description;
-            shortTextPostfix =
-                htmlPostfix = "";
+                shortTextPrefix =
+                    htmlPrefix = Meta.Description;
+                shortTextPostfix =
+                    htmlPostfix = "";
+            }
+            catch(Exception ex)
+            {
+                Env.WriteToLog(ex, el.OuterXml??"Пусто");
+            }
         }
 
         #region ACCESSORS
@@ -93,6 +105,7 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
         {
 			map = new Dictionary<string, Type>();
 			subsmap = new Dictionary<string, Type>();
+			sepmap = new Dictionary<string, Type>();
             foreach (Type type in typeof (Option).Assembly.GetTypes())
             {
                 if (!type.IsSubclassOf(typeof (Option))) continue;
@@ -101,6 +114,9 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
                 map.Add(meta.Name, type);
 				if(meta.MainOption != null)
 					subsmap.Add(meta.Name, meta.MainOption);
+				SeparateOptionAttribute sep = GetSeparete(type);
+				if(sep != null)
+					sepmap.Add(sep.Name, sep.SeparateType);
             }
         }
 
@@ -114,6 +130,24 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
             OptionAttribute[] attr = (OptionAttribute[]) type.GetCustomAttributes(typeof (OptionAttribute), false);
             return attr.Length == 1 ? attr[0] : null;
         }
+
+		public static SeparateOptionAttribute GetSeparete(Type type)
+		{
+			SeparateOptionAttribute[] attr = (SeparateOptionAttribute[])type.GetCustomAttributes(typeof(SeparateOptionAttribute), false);
+			return attr.Length == 1 ? attr[0] : null;
+		}
+
+		public List<Type> GetSepOptions()
+		{
+			var types = sepmap.Where(x => x.Key == this.Meta.Name).Select(x => x.Value).ToList();
+			return types.Count > 0 ? types : null;
+		}
+
+		public List<string> GetExtOptions()
+		{
+			var types = sepmap.Where(x => x.Value == this.GetType()).Select(x => x.Key).ToList();
+			return types.Count > 0 ? types : null;
+		}
 
 		public List<string> GetSubOptions()
 		{
@@ -210,61 +244,17 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search
             return s;
         }
 
+		public virtual bool IsSeparate()
+		{
+			if(el.HasAttribute("Separate"))
+				return true.ToString().Equals(el.GetAttribute("Separate"));
+			else
+				return true;
+		}
+
 		internal bool IsSubOption()
 		{
 			return subsmap.ContainsKey(this.Meta.Name);
 		}
 	}
-
-    [Localizable(true)]
-    public class OptionAttribute : Attribute
-    {
-		public OptionAttribute(string name, string description)
-		{
-			Name = name;
-			Description = description;
-		}
-
-		public OptionAttribute(string name, Type type)
-        {
-            Name = name;
-            var res = new ResourceManager(type);
-            try
-            {
-                string des = res.GetString("Meta.Description");
-                if (!string.IsNullOrEmpty(des))
-                    Description = des;
-            }
-            catch
-            {
-                Description = name;
-            }
-        }
-
-		public OptionAttribute(string name, Type type, Type mainOption, int index)
-		{
-			Name = name;
-			var res = new ResourceManager(type);
-			try
-			{
-				string des = res.GetString("Meta.Description");
-				if(!string.IsNullOrEmpty(des))
-					Description = des;
-			}
-			catch
-			{
-				Description = name;
-			}
-			MainOption = mainOption;
-			Index = index;
-		}
-
-        public string Name { get; private set; }
-
-        public string Description { get; set; }
-
-		public Type MainOption { get; private set; }
-
-		public int Index { get; private set; }
-    }
 }

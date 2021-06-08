@@ -3,7 +3,8 @@ using System.Xml;
 namespace Kesco.Lib.Win.Data.DALC.Documents.Search.EForm.NoSign
 {
     [Option("EForm.NoSing.НеВыполнен", typeof (НеВыполнен))]
-    public class НеВыполнен : Option
+	[SeparateOption("EForm.NoSing.НеВыполнен", typeof(ЭлФорма))]
+	public class НеВыполнен : Option
     {
         protected НеВыполнен(XmlElement el)
             : base(el)

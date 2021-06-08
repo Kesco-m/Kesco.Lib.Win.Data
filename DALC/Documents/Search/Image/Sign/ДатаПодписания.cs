@@ -8,7 +8,8 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.Sign
     /// Summary description for ДатаПодписания.
     /// </summary>
     [Option("Image.Sing.ДатаПодписания", typeof (ДатаПодписания))]
-    public class ДатаПодписания : DateOption
+	[SeparateOption("Image.Sing.ДатаПодписания", typeof(Изображение))]
+	public class ДатаПодписания : DateOption
     {
         protected ДатаПодписания(XmlElement el) : base(el)
         {
@@ -22,10 +23,10 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.Sign
             try
             {
                 sql =
-                    @"
+					@"
 EXISTS (SELECT     *
 FROM	ПодписиДокументов TI WITH(NOLOCK)
-WHERE TI.КодДокумента=T0.КодДокумента AND TI.ТипПодписи<>101 AND  TI.КодИзображенияДокумента IS NOT NULL AND " +
+WHERE TI.КодДокумента=T0.КодДокумента AND TI.ТипПодписи<>101 AND " + (IsSeparate() ? "TI.КодИзображенияДокумента IS NOT NULL AND ":"") +
                     GetSQLCondition("TI.Дата") + ")";
             }
             catch (Exception ex)

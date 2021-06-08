@@ -9,7 +9,8 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.Sign
     /// </summary>
     /// 
     [Option("Image.Sing.ПодписанМной", typeof (ПодписанМной))]
-    public class ПодписанМной : MyOption
+	[SeparateOption("Image.Sing.ПодписанМной", typeof(Изображение))]
+	public class ПодписанМной : MyOption
     {
         protected ПодписанМной(XmlElement el)
             : base(el)
@@ -24,7 +25,7 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.Sign
             return
 				@"EXISTS (SELECT *
                     FROM Документы.dbo.ПодписиДокументов TI WITH(NOLOCK)
-                    WHERE TI.КодДокумента=T0.КодДокумента AND TI.ТипПодписи<>101 AND TI.КодИзображенияДокумента IS NOT NULL AND
+                    WHERE TI.КодДокумента=T0.КодДокумента AND TI.ТипПодписи<>101 " + (IsSeparate()?"AND TI.КодИзображенияДокумента IS NOT NULL":"") + @" AND
                     (TI.КодСотрудникаЗа = " +
                 Value + " OR TI.КодСотрудника = " + Value + "))" + Environment.NewLine;
         }

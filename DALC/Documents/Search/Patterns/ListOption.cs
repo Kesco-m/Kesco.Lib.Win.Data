@@ -39,22 +39,24 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Patterns
             }
         }
 
-        public virtual string[] GetValues(bool throwOnError)
-        {
-            if (Value.Length == 0) return new string[] {};
+		public virtual string[] GetValues(bool throwOnError)
+		{
+			if(Value.Length == 0)
+				return new string[] { };
 
-            string[] S = Value.Split(',');
+			string[] S = Value.Split(',');
 
-            foreach (string t in S.Where(t => mask != null && !Regex.IsMatch(t, mask, RegexOptions.IgnoreCase)))
-                if (throwOnError)
-                {
-                    var resources = new ResourceManager(typeof (ListOption));
-                    throw new Exception(resources.GetString("GetValues") + mask + ".");
-                }
-                else return new string[] {};
+			foreach(string t in S.Where(t => mask != null && !Regex.IsMatch(t, mask, RegexOptions.IgnoreCase)))
+				if(throwOnError)
+				{
+					var resources = new ResourceManager(typeof(ListOption));
+					throw new Exception(resources.GetString("GetValues") + mask + ".");
+				}
+				else
+					return new string[] { };
 
-            return S;
-        }
+			return S;
+		}
 
         public string GetSQLCondition2(string field)
         {

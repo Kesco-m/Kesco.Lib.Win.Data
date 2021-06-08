@@ -251,7 +251,12 @@ namespace Kesco.Lib.Win.Data.DALC.Corporate
             return IsInRole(Roles.FaxSender, docPersonsIDs) || IsInRole(Roles.FaxReceiver, docPersonsIDs);
 		}
 
-		public bool IsDocDeleter()
+        public bool IsFaxSenderWithOutSave()
+        {
+            return IsInRole(Roles.FaxSenderWithOutSave);
+        }
+
+        public bool IsDocDeleter()
 		{
 			return IsInRole(Roles.DocDeleter);
 		}

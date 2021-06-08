@@ -15,7 +15,7 @@ namespace Kesco.Lib.Win.Data.DALC
 	/// </summary>
 	public class DALC : LocalObject
 	{
-		protected const int cmdTimeout = 60; // таймаут в секундах
+		protected const int cmdTimeout = 120; // таймаут в секундах
 
 		protected string connectionString;
 
@@ -227,8 +227,7 @@ namespace Kesco.Lib.Win.Data.DALC
 			using(var cmd = new SqlCommand(query, conn))
 			{
 				command = cmd;
-				if(addParams != null)
-					addParams(cmd);
+				addParams?.Invoke(cmd);
 				return CMD_FillDT(cmd);
 			}
 		}

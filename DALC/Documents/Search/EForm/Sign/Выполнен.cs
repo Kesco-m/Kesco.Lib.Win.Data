@@ -4,7 +4,8 @@ using Kesco.Lib.Win.Data.DALC.Documents.Search.Patterns;
 namespace Kesco.Lib.Win.Data.DALC.Documents.Search.EForm.Sign
 {
     [Option("EForm.Sing.Выполнен", typeof (Выполнен))]
-    public class Выполнен : EmployeeListOption
+	[SeparateOption("EForm.Sing.Выполнен", typeof(ЭлФорма))]
+	public class Выполнен : EmployeeListOption
     {
         protected Выполнен(XmlElement el)
             : base(el)

@@ -7,8 +7,9 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.Sign
 	/// <summary>
 	/// Summary description for Аннулировано.
 	/// </summary>
-	[AllAnyAttribute("Аннулировано", true)]
+	[AllAny("Аннулировано", true)]
 	[Option("Image.Sing.Аннулировано", typeof(Аннулировано))]
+	[SeparateOption("Image.Sing.Аннулировано", typeof(Изображение))]
 	public class Аннулировано : EmployeeListOption
 	{
 		public bool IsSingle;

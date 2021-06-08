@@ -85,7 +85,7 @@ namespace Kesco.Lib.Win.Data.DALC.Directory
 				" LEFT OUTER JOIN Справочники.dbo.vwСвязиЛиц li ON K.КодСвязиЛиц = li.КодСвязиЛиц " +
 				" WHERE " +
 				"(K.КодЛица = @ID) " +
-				"AND ((ТК.Категория = 3) OR (ТК.Категория = 4)) AND( GETUTCDATE() BETWEEN li.От AND li.До OR K.КодСвязиЛиц IS NULL) "+
+				"AND  ТК." + categoryField + " = 4 AND( GETUTCDATE() BETWEEN li.От AND li.До OR K.КодСвязиЛиц IS NULL) "+//(ТК." + categoryField + " = 3 OR)
 				" ORDER BY K." + personLinkIDField + ", K." + idField + " DESC",
 				delegate(SqlCommand cmd)
 				{

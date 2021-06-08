@@ -6,12 +6,13 @@ using Kesco.Lib.Win.Data.DALC.Documents.Search.Patterns;
 namespace Kesco.Lib.Win.Data.DALC.Documents.Search.EForm.NoSign
 {
     [Option("EForm.NoSing.НеПодписан", typeof (НеПодписан))]
+	[SeparateOption("EForm.NoSing.НеПодписан", typeof(ЭлФорма))]
     public class НеПодписан : EmployeeListOption
     {
         protected НеПодписан(XmlElement el)
             : base(el)
         {
-            NegativeValueOption = new[] {"EForm.Sing.Подписан", "EForm.Sing.ПодписанМной"};
+            NegativeValueOption = new[] {"EForm.Sing.Подписан", "EForm.Sing.ПодписанМной", "EForm.Sing.Выполнен" };
 
             emptyValueText = Resources.GetString("emptyValueText");
 

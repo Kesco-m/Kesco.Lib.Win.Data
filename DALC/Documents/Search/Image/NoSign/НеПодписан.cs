@@ -6,7 +6,8 @@ using Kesco.Lib.Win.Data.DALC.Documents.Search.Patterns;
 namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.NoSign
 {
     [Option("Image.NoSing.НеПодписан", typeof (НеПодписан))]
-    public class НеПодписан : EmployeeListOption
+	[SeparateOption("Image.NoSing.НеПодписан", typeof(Изображение))]
+	public class НеПодписан : EmployeeListOption
     {
         private string pattern;
 
@@ -42,15 +43,14 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.NoSign
                 return vals.Length != 0
                            ? GetSQLCondition(
 							   @"
-                            NOT EXISTS (SELECT *
-                            FROM Документы.dbo.ПодписиДокументов TI WITH(NOLOCK)
-                            WHERE TI.КодДокумента=T0.КодДокумента AND TI.КодИзображенияДокумента IS NOT NULL AND TI.ТипПодписи<>101 AND
-                            (TI.КодСотрудникаЗа = @VAL OR TI.КодСотрудника = @VAL))"
+    NOT EXISTS (SELECT *
+    FROM Документы.dbo.ПодписиДокументов TI WITH(NOLOCK)
+    WHERE TI.КодДокумента=T0.КодДокумента AND "+ (IsSeparate() ? "TI.КодИзображенияДокумента IS NOT NULL AND ":"")+"TI.ТипПодписи<>101 AND (TI.КодСотрудникаЗа = @VAL OR TI.КодСотрудника = @VAL))"
 																)
                            : @"
-                            NOT EXISTS (SELECT *
-                            FROM Документы.dbo.ПодписиДокументов TI WITH(NOLOCK)
-                            WHERE TI.КодИзображенияДокумента IS NOT NULL AND TI.ТипПодписи<>101 AND TI.КодДокумента=T0.КодДокумента)";
+    NOT EXISTS (SELECT *
+    FROM Документы.dbo.ПодписиДокументов TI WITH(NOLOCK)
+    WHERE "+ (IsSeparate() ? "TI.КодИзображенияДокумента IS NOT NULL AND " : "")+"TI.ТипПодписи<>101 AND TI.КодДокумента=T0.КодДокумента)";
             }
             catch (Exception ex)
             {

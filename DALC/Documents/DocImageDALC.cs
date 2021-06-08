@@ -386,13 +386,7 @@ namespace Kesco.Lib.Win.Data.Documents
         /// <param name="mainImage">основное изображение</param>
         /// <param name="pagesCount">количество страниц</param>
         /// <returns></returns>
-        public bool DocImageInsert(int imageServer, string fileName, ref int imageID, ref int docID, int docTypeID,
-                                   string name, DateTime date, string number, string descr, bool protect,
-                                   DateTime scanDate, int archiveID, bool mainImage, int pagesCount)
-        {
-            return DocImageInsert(imageServer, fileName, ref imageID, ref docID, docTypeID, name, date, number, descr,
-                                  protect, scanDate, archiveID, mainImage, 0, "TIF", pagesCount);
-        }
+       
 
         public bool DocImageInsert(int imageServer, string fileName, ref int imageID, ref int docID, int docTypeID,
                                    string name, DateTime date, string number, string descr, bool protect,
@@ -421,20 +415,12 @@ namespace Kesco.Lib.Win.Data.Documents
         /// <param name="printed">распечатаная эл. форма</param>
         /// <param name="pagesCount">количество страниц</param>
         /// <returns></returns>
-        public bool DocImageInsert(int imageServer, string fileName, ref int imageID, ref int docID, int docTypeID,
-                                   string name, DateTime date, string number, string descr, bool protect,
-                                   DateTime scanDate, int archiveID, bool mainImage, int printed, int pagesCount)
-        {
-            return DocImageInsert(imageServer, fileName, ref imageID, ref docID, docTypeID, name, date, number, descr,
-                                  protect, scanDate, archiveID, mainImage, printed, "TIF", pagesCount);
-        }
-
         public bool DocImageInsert(ref int imageID, ref int docID, int docTypeID, string name, DateTime date,
                                    string number, string descr, bool protect, DateTime scanDate, int archiveID,
-                                   bool mainImage, int pagesCount)
+								   bool mainImage, string imageType, int pagesCount)
         {
             return DocImageInsert(0, "", ref imageID, ref docID, docTypeID, name, date, number, descr, protect, scanDate,
-                                  archiveID, mainImage, 0, "TIF", pagesCount);
+                                  archiveID, mainImage, 0, imageType, pagesCount);
         }
 
         /// <summary>

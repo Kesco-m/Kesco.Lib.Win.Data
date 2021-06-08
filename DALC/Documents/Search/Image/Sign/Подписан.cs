@@ -8,6 +8,7 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.Sign
 	/// Summary description for Подписан.
 	/// </summary>
 	[Option("Image.Sing.Подписан", typeof(Подписан))]
+	[SeparateOption("Image.Sing.Подписан", typeof(Изображение))]
 	public class Подписан : EmployeeListOption
 	{
 		protected Подписан(XmlElement el) : base(el)
@@ -40,13 +41,13 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.Sign
 					return GetSQLCondition(@"
 EXISTS (SELECT *
 FROM Документы.dbo.ПодписиДокументов TI WITH(NOLOCK)
-WHERE TI.КодДокумента=T0.КодДокумента AND TI.КодИзображенияДокумента IS NOT NULL AND TI.ТипПодписи<>101 AND
+WHERE TI.КодДокумента=T0.КодДокумента " + (IsSeparate() ? "AND TI.КодИзображенияДокумента IS NOT NULL ":"") + @"AND TI.ТипПодписи<>101 AND
 (TI.КодСотрудникаЗа = @VAL OR TI.КодСотрудника = @VAL))");
 				else
 					return @"
 EXISTS (SELECT *
 FROM Документы.dbo.ПодписиДокументов TI WITH(NOLOCK)
-WHERE TI.КодДокумента=T0.КодДокумента AND TI.КодИзображенияДокумента IS NOT NULL AND TI.ТипПодписи<>101)";
+WHERE TI.КодДокумента=T0.КодДокумента " + (IsSeparate() ? "AND TI.КодИзображенияДокумента IS NOT NULL " : "") + "AND TI.ТипПодписи<>101)";
 			}
 			catch(Exception ex)
 			{

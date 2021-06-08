@@ -5,7 +5,8 @@ using Kesco.Lib.Win.Data.DALC.Documents.Search.Patterns;
 namespace Kesco.Lib.Win.Data.DALC.Documents.Search.EForm.Sign
 {
     [Option("EForm.Sing.ДатаПодписания", typeof (ДатаПодписания))]
-    public class ДатаПодписания : DateOption
+	[SeparateOption("EForm.Sing.ДатаПодписания", typeof(ЭлФорма))]
+	public class ДатаПодписания : DateOption
     {
         protected ДатаПодписания(XmlElement el) : base(el)
         {
@@ -19,10 +20,10 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.EForm.Sign
             try
             {
                 sql =
-                    @"
+					@"
 EXISTS (SELECT     *
 FROM	ПодписиДокументов TI WITH(NOLOCK)
-WHERE TI.КодДокумента=T0.КодДокумента AND TI.КодИзображенияДокумента IS NULL AND " +
+WHERE TI.КодДокумента=T0.КодДокумента "+ (IsSeparate() ? "AND TI.КодИзображенияДокумента IS NULL ":"")+"AND " +
                     GetSQLCondition("TI.Дата") + ")";
 
             }

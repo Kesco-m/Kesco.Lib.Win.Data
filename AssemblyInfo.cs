@@ -1,6 +1,5 @@
-using System.Reflection;
-using System.Security;
 using Kesco.Lib.Log;
+using System.Reflection;
 
 //
 // General Information about an assembly is controlled through the following 

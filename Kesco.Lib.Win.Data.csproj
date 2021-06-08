@@ -42,10 +42,14 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <SccProjectName>Svn</SccProjectName>
-    <SccLocalPath>Svn</SccLocalPath>
-    <SccAuxPath>Svn</SccAuxPath>
-    <SccProvider>SubversionScc</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -471,6 +475,7 @@
     <Compile Include="DALC\Documents\Search\1C\Проведен.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DALC\Documents\Search\Attribute.cs" />
     <Compile Include="DALC\Documents\Search\Contract\LinkedToByCurator.cs" />
     <Compile Include="DALC\Documents\Search\Document\ChangedBy.cs">
       <SubType>Code</SubType>
@@ -478,6 +483,7 @@
     <Compile Include="DALC\Documents\Search\Document\ВРаботе.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DALC\Documents\Search\Document\Выполнен.cs" />
     <Compile Include="DALC\Documents\Search\Document\Дата.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -488,6 +494,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DALC\Documents\Search\Document\Название.cs" />
+    <Compile Include="DALC\Documents\Search\Document\НеВыполнен.cs" />
     <Compile Include="DALC\Documents\Search\Document\Номер.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -855,6 +862,30 @@
       <LastGenOutput>DSDocs.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Выполнен.en.resx">
+      <DependentUpon>Выполнен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Выполнен.et.resx">
+      <DependentUpon>Выполнен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Выполнен.resx">
+      <DependentUpon>Выполнен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\Выполнен.ru.resx">
+      <DependentUpon>Выполнен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\НеВыполнен.en.resx">
+      <DependentUpon>НеВыполнен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\НеВыполнен.et.resx">
+      <DependentUpon>НеВыполнен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\НеВыполнен.resx">
+      <DependentUpon>НеВыполнен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DALC\Documents\Search\Document\НеВыполнен.ru.resx">
+      <DependentUpon>НеВыполнен.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DALC\Documents\Search\FolderRules\Document.et.resx">
       <DependentUpon>Document.cs</DependentUpon>
     </EmbeddedResource>
@@ -895,6 +926,9 @@
       <DependentUpon>TextOption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StringResources.ru.resx" />
+    <None Include="Business\V2\Docs\DSDocs.xsc">
+      <DependentUpon>DSDocs.xsd</DependentUpon>
+    </None>
     <None Include="Business\V2\Docs\DSDocs.xsx">
       <DependentUpon>DSDocs.xsd</DependentUpon>
     </None>
@@ -1167,6 +1201,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеВыполнен.ru.resx">
       <DependentUpon>НеВыполнен.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписан.en.resx">
       <DependentUpon>НеПодписан.cs</DependentUpon>
@@ -1182,6 +1217,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписан.ru.resx">
       <DependentUpon>НеПодписан.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DALC\Documents\Search\EForm\NoSign\НеПодписанМной.en.resx">
       <DependentUpon>НеПодписанМной.cs</DependentUpon>
@@ -1212,6 +1248,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\Выполнен.ru.resx">
       <DependentUpon>Выполнен.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DALC\Documents\Search\EForm\Sign\ДатаВыполнения.en.resx">
       <DependentUpon>ДатаВыполнения.cs</DependentUpon>

@@ -5,7 +5,8 @@ using Kesco.Lib.Win.Data.DALC.Documents.Search.Patterns;
 namespace Kesco.Lib.Win.Data.DALC.Documents.Search.EForm.Sign
 {
     [Option("EForm.Sing.ДатаВыполнения", typeof (ДатаВыполнения))]
-    public class ДатаВыполнения : DateOption
+	[SeparateOption("EForm.Sing.ДатаВыполнения", typeof(ЭлФорма))]
+	public class ДатаВыполнения : DateOption
     {
         protected ДатаВыполнения(XmlElement el) : base(el)
         {

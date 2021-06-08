@@ -8,7 +8,8 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.Image.Sign
     /// Summary description for ДатаАннулирования.
     /// </summary>
     [Option("Image.Sing.ДатаАннулирования", typeof (ДатаАннулирования))]
-    public class ДатаАннулирования : DateOption
+	[SeparateOption("Image.Sing.ДатаАннулирования", typeof(Изображение))]
+	public class ДатаАннулирования : DateOption
     {
         protected ДатаАннулирования(XmlElement el)
             : base(el)

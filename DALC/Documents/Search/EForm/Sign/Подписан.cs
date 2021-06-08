@@ -5,12 +5,13 @@ using Kesco.Lib.Win.Data.DALC.Documents.Search.Patterns;
 namespace Kesco.Lib.Win.Data.DALC.Documents.Search.EForm.Sign
 {
     [Option("EForm.Sing.Подписан", typeof (Подписан))]
-    public class Подписан : EmployeeListOption
+	[SeparateOption("EForm.Sing.Подписан", typeof(ЭлФорма))]
+	public class Подписан : EmployeeListOption
     {
         protected Подписан(XmlElement el)
             : base(el)
         {
-            NegativeValueOption = new[] {"EForm.NoSing.НеПодписан", "EForm.NoSing.НеПодписанМной"};
+			NegativeValueOption = new[] { "EForm.NoSing.НеПодписан", "EForm.NoSing.НеПодписанМной", "EForm.NoSing.НеВыполнен" };
 
             emptyValueText = Resources.GetString("emptyValueText");
 
@@ -37,16 +38,16 @@ namespace Kesco.Lib.Win.Data.DALC.Documents.Search.EForm.Sign
                 string[] vals = GetValues(throwOnError);
                 return vals.Length != 0
                            ? GetSQLCondition(
-                               @"
+							   @"
 EXISTS (SELECT *
 FROM Документы.dbo.ПодписиДокументов TI WITH(NOLOCK)
-WHERE TI.КодДокумента=T0.КодДокумента AND TI.КодИзображенияДокумента IS NULL AND 
-(TI.КодСотрудникаЗа = @VAL OR TI.КодСотрудника = @VAL))"
-                                 )
+WHERE TI.КодДокумента=T0.КодДокумента AND "+ (IsSeparate() ? "TI.КодИзображенияДокумента IS NULL AND ":"")+"(TI.КодСотрудникаЗа = @VAL OR TI.КодСотрудника = @VAL))"
+
+								 )
                            : @"
 EXISTS (SELECT *
 FROM Документы.dbo.ПодписиДокументов TI WITH(NOLOCK)
-WHERE TI.КодДокумента=T0.КодДокумента AND TI.КодИзображенияДокумента IS NULL)";
+WHERE TI.КодДокумента=T0.КодДокумента"+ (IsSeparate() ? " AND TI.КодИзображенияДокумента IS NULL":"") + ")";
             }
             catch (Exception ex)
             {

@@ -1,12 +1,13 @@
+using System;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace Kesco.Lib.Win.Data.DALC.Documents
 {
-    /// <summary>
-    /// Summary description for MessageDALC.
-    /// </summary>
-    public class MessageDALC : DALC
+	/// <summary>
+	/// Summary description for MessageDALC.
+	/// </summary>
+	public class MessageDALC : DALC
     {
         private const string sentField = "Отправлено";
         private const string senderField = "Отправитель";
@@ -122,14 +123,14 @@ namespace Kesco.Lib.Win.Data.DALC.Documents
             return CMD_FillDT(cmd);
         }
 
-        #endregion
+		#endregion
 
-        #region Change Data
+		#region Change Data
 
 		public bool SendOneRecipientMessage(int docID, int empID, string message, int recipientID, bool personal)
 		{
-			int id = GetIntField(
-					@"DECLARE @MessID int
+			int id = 0;
+			string sql = @"DECLARE @MessID int
 	                IF NOT EXISTS(SELECT * FROM vwДокументы (nolock) WHERE КодДокумента = @DocID)
                     BEGIN
 						RAISERROR('Документ с кодом %d был не найден или не доступен',12,1, @DocID)
@@ -154,18 +155,57 @@ namespace Kesco.Lib.Win.Data.DALC.Documents
 						RETURN 
 					END
 					SELECT @MessID " +
-					identityField, identityField, delegate(SqlCommand cmd)
-													  {
-														  AddParam(cmd, "@DocID", SqlDbType.Int, docID);
-														  AddParam(cmd, "@EmpID", SqlDbType.Int, empID);
-														  AddParam(cmd, "@Message", SqlDbType.NVarChar, message);
-														  AddParam(cmd, "@Person", SqlDbType.TinyInt, (personal ? 1 : 0));
-														  AddParam(cmd, "@RecipientID", SqlDbType.VarChar, recipientID);
-													  });
+			identityField;
+			using(SqlConnection cn = new SqlConnection(connectionString))
+			using(SqlCommand cmd = new SqlCommand(sql, cn))
+			{ 
+				AddParam(cmd, "@DocID", SqlDbType.Int, docID);
+				AddParam(cmd, "@EmpID", SqlDbType.Int, empID);
+				AddParam(cmd, "@Message", SqlDbType.NVarChar, message);
+				AddParam(cmd, "@Person", SqlDbType.TinyInt, (personal ? 1 : 0));
+				AddParam(cmd, "@RecipientID", SqlDbType.VarChar, recipientID);
+				cmd.CommandTimeout = cmdTimeout;
+				bool? repeat = null;
+				while(!repeat.HasValue || repeat.Value)
+					try
+					{
+						cn.Open();
+						using(SqlTransaction trn = cn.BeginTransaction(IsolationLevel.ReadCommitted))
+						{
+							cmd.Transaction = trn;
+							object obj = cmd.ExecuteScalar();
+
+							repeat = false;
+							id = (obj is int) ? (int)obj : 0;
+							if(id< 1)
+								trn.Rollback();
+							else
+								trn.Commit();
+						}
+					}
+					catch(SqlException sqlEx)
+					{
+						if((sqlEx.Number != 6005 && sqlEx.Number != 10054) || (repeat.HasValue && repeat.Value))
+						{
+							repeat = false;
+							if((sqlEx.Class == 11 && sqlEx.Number == 0) || (sqlEx.Class == 16 && sqlEx.Number == 3980))
+								return false;
+							else
+								ProcessSqlEx(sqlEx, cmd);
+						}
+						else
+							repeat = true;
+					}
+					catch(Exception ex)
+					{
+						repeat = false;
+						ErrorMessage(ex, null, "CMD_GetField");
+					}
+			}
 			if(id > 0)
 			{
 				return ExecNoError("sp_ОтправкаСообщения",
-								   delegate(SqlCommand cmd)
+								   delegate (SqlCommand cmd)
 								   {
 									   cmd.Parameters.AddWithValue("@КодСообщения", id);
 									   cmd.CommandType = CommandType.StoredProcedure;
@@ -176,8 +216,8 @@ namespace Kesco.Lib.Win.Data.DALC.Documents
 
 		public bool SendMessage2(int docID, int empID, string message, string recipientIDs, string recipients, string recipientsEn, bool personal)
 		{
-			int id = GetIntField(
-					@"DECLARE @MessID int
+			int id = 0;
+			string sql = @"DECLARE @MessID int
 	            IF NOT EXISTS(SELECT * FROM vwДокументы (nolock) WHERE КодДокумента = @DocID)
                 BEGIN
 		            RAISERROR('Документ с кодом %d был не найден или не доступен',12,1, @DocID)
@@ -202,14 +242,52 @@ namespace Kesco.Lib.Win.Data.DALC.Documents
 		            RAISERROR('Не удалось добавить получателей сообщения',16,1)
 		            RETURN 
 	            END
-                SELECT @MessID " +
-					identityField, identityField, delegate(SqlCommand cmd)
-													  {
-														  AddParam(cmd, "@DocID", SqlDbType.Int, docID);
-														  AddParam(cmd, "@EmpID", SqlDbType.Int, empID);
-														  AddParam(cmd, "@Message", SqlDbType.NVarChar, message);
-														  AddParam(cmd, "@Person", SqlDbType.TinyInt, (personal ? 1 : 0));
-													  });
+                SELECT @MessID " + identityField;
+			using(SqlConnection cn = new SqlConnection(connectionString))
+			using(SqlCommand cmd = new SqlCommand(sql, cn))
+			{
+				AddParam(cmd, "@DocID", SqlDbType.Int, docID);
+				AddParam(cmd, "@EmpID", SqlDbType.Int, empID);
+				AddParam(cmd, "@Message", SqlDbType.NVarChar, message);
+				AddParam(cmd, "@Person", SqlDbType.TinyInt, (personal ? 1 : 0));
+				cmd.CommandTimeout = cmdTimeout;
+				bool? repeat = null;
+				while(!repeat.HasValue || repeat.Value)
+					try
+					{
+						cn.Open();
+						using(SqlTransaction trn = cn.BeginTransaction(IsolationLevel.ReadCommitted))
+						{
+							cmd.Transaction = trn;
+							object obj = cmd.ExecuteScalar();
+
+							repeat = false;
+							id = (obj is int) ? (int)obj : 0;
+							if(id< 1)
+								trn.Rollback();
+							else
+								trn.Commit();
+						}
+					}
+					catch(SqlException sqlEx)
+					{
+						if((sqlEx.Number != 6005 && sqlEx.Number != 10054) || (repeat.HasValue && repeat.Value))
+						{
+							repeat = false;
+							if((sqlEx.Class == 11 && sqlEx.Number == 0) || (sqlEx.Class == 16 && sqlEx.Number == 3980))
+								return false;
+							else
+								ProcessSqlEx(sqlEx, cmd);
+						}
+						else
+							repeat = true;
+					}
+					catch(Exception ex)
+					{
+						repeat = false;
+						ErrorMessage(ex, null, "CMD_GetField");
+					}
+			}
 			if(id > 0)
 			{
 				return ExecNoError("sp_ОтправкаСообщения",
